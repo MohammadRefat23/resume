@@ -1,0 +1,115 @@
+%-------------------------
+% Mohammad Refat - Industry Resume
+% Modular Jake's Resume structure
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+%----------PACKAGES----------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------PAGE STYLE----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%----------MARGINS----------
+\addtolength{\oddsidemargin}{-0.45in}
+\addtolength{\evensidemargin}{-0.45in}
+\addtolength{\textwidth}{0.90in}
+\addtolength{\topmargin}{-0.48in}
+\addtolength{\textheight}{0.92in}
+\addtolength{\textheight}{0.18in}
+\setlength{\footskip}{8pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%----------SECTION FORMATTING----------
+\titleformat{\section}
+  {\vspace{-1pt}\large\bfseries\raggedright}
+  {}{0em}{}
+  [\color{black}\titlerule \vspace{-3pt}]
+
+\pdfgentounicode=1
+
+%----------CUSTOM COMMANDS----------
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{0pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \small #2 \\
+    \small #3 & \small\textit{#4} \\
+  \end{tabular*}
+  \vspace{-3pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small #1 & \small #2 \\
+  \end{tabular*}
+  \vspace{-3pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in,label={},itemsep=2pt,topsep=2pt]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}
+}
+
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[leftmargin=0.20in,itemsep=1pt,topsep=2pt]
+}
+
+\newcommand{\resumeItemListEnd}{
+  \end{itemize}\vspace{-2pt}
+}
+
+\newcommand{\resumeSkill}[2]{
+  \textbf{#1:} #2
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%----------HYPERSETUP----------
+\hypersetup{
+  pdftitle={Mohammad Alvi Refat - Resume},
+  pdfauthor={Mohammad Alvi Refat},
+  pdfsubject={Scientific Computing and Data Analysis Resume}
+}
+
+
+%-------------------------------------------
+% DOCUMENT
+%-------------------------------------------
+
+\begin{document}
+
+\input{sections/header}
+\input{sections/summary}
+\input{sections/technical-skills}
+\input{sections/experience}
+\input{sections/projects}
+\input{sections/education}
+\input{sections/publications}
+
+\end{document}
